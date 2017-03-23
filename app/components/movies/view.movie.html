@@ -1,0 +1,49 @@
+<div>
+
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<form name='smc.form' novalidate>
+				<div class="form-group" >
+			    	<label for="name"> Movie:</label>
+			     	<input type="text" class="bg-danger form-control" id="name" ng-model="smc.selectedmovie.name" name="name" required maxlength="20" minlength ="3" 
+
+			     	>
+
+			   	</div>
+			   	<div ng-messages="smc.form.name.$error"  role="alert"> 
+			   		<p  ng-message='required'>This field is required!</p>
+			   		<p  ng-message='maxlength'>This field accepts 20 characters max!</p>
+			   		<p  ng-message='minlength'>This requires at least 3 characters max!</p>
+			   	</div>
+				<div class="form-group">
+			    	<label for="genre"> Genre:</label>
+			     	<input type="text" class="form-control" id="genre" ng-model="smc.selectedmovie.genre">
+			   	</div>
+				<div class="form-group">
+			    	<label for="director"> Director:</label>
+			     	<input ng-model="smc.selectedmovie.director" type="text" class="form-control" id="director">
+			   	</div>
+				<div class="form-group">
+			    	<label for="duration"> Duration:</label>
+			     	<input ng-model="smc.selectedmovie.duration" type="text" class="form-control" id="duration">
+			   	</div>
+				<div class="form-group">
+			    	<label for="rating"> Rating:</label>
+			     	<input ng-model="smc.selectedmovie.rating" type="text" class="form-control" id="rating">
+			   	</div>
+				<div class="form-group">
+			    	<label for="year"> Year:</label>
+			     	<input ng-model="smc.selectedmovie.year" type="text" class="form-control" id="year">
+			   	</div>
+				<div class="form-group">
+			    	<label for="description"> Description:</label>
+			     	<textarea rows="5" ng-model="smc.selectedmovie.description" type="text" class="form-control" id="description"></textarea>
+			   	</div>			   	
+				<div class="form-group">
+						<button ng-click="smc.saveChanges()" class="btn btn-primary"> Save</button>
+			   	</div>
+			</form>
+
+		</div>
+		<div class="col-sm-3"><button ng-click="smc.newMovie()" class="btn btn-primary"> Add New Movie</button></div>
+</div>		
